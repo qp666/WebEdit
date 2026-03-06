@@ -1,5 +1,5 @@
 {
-    "name": "EditWeb",
+    "name": "WebEdit",
     "description": "Edit web page elements freely",
     "version": "0.0.1",
     "manifest_version": 3,
@@ -10,7 +10,7 @@
     },
     "action": {
         "default_icon": "images/edit_off.png",
-        "default_title": "EditWeb"
+        "default_title": "WebEdit"
     },
     "background": {
         "service_worker": "js/main.js"
