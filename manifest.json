@@ -1,0 +1,48 @@
+{
+    "name": "EditWeb",
+    "description": "Edit web page elements freely",
+    "version": "0.0.1",
+    "manifest_version": 3,
+    "icons": {
+        "16": "images/edit_off.png",
+        "48": "images/edit_off.png",
+        "128": "images/edit_off.png"
+    },
+    "action": {
+        "default_icon": "images/edit_off.png",
+        "default_title": "EditWeb"
+    },
+    "background": {
+        "service_worker": "js/main.js"
+    },
+    "commands": {
+        "toggle-design-mode": {
+            "suggested_key": {
+                "default": "Alt+Shift+D",
+                "mac": "Alt+Shift+D"
+            },
+            "description": "Toggle Edit Mode"
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "js/main.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "contextMenus",
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "host_permissions": [
+        "http://*/*",
+        "https://*/*"
+    ]
+}
