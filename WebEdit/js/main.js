@@ -172,10 +172,12 @@ if (isContentScript) {
         toast.id = "webedit-toast";
         toast.textContent = message;
         
-        // 样式设置
-        toast.style.position = "fixed";
-        toast.style.top = "20px";
-        toast.style.right = "20px";
+        // 样式设置（使用 !important 防止被页面样式覆盖）
+        toast.style.setProperty("position", "fixed", "important");
+        toast.style.setProperty("top", "50%", "important");
+        toast.style.setProperty("left", "50%", "important");
+        toast.style.setProperty("right", "auto", "important");
+        toast.style.setProperty("bottom", "auto", "important");
         toast.style.padding = "12px 24px";
         toast.style.borderRadius = "8px";
         toast.style.fontFamily = "system-ui, -apple-system, sans-serif";
@@ -183,9 +185,9 @@ if (isContentScript) {
         toast.style.fontWeight = "500";
         toast.style.zIndex = "2147483647"; // Max z-index
         toast.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
-        toast.style.transition = "all 0.3s ease";
+        toast.style.transition = "opacity 0.3s ease, transform 0.3s ease";
         toast.style.opacity = "0";
-        toast.style.transform = "translateY(-20px)";
+        toast.style.transform = "translate(-50%, -50%) scale(0.96)";
 
         if (type === "success") {
             toast.style.backgroundColor = "#3b82f6"; // Blue 500 for Enabled
@@ -200,13 +202,13 @@ if (isContentScript) {
         // 动画显示
         requestAnimationFrame(() => {
             toast.style.opacity = "1";
-            toast.style.transform = "translateY(0)";
+            toast.style.transform = "translate(-50%, -50%) scale(1)";
         });
 
         // 自动消失
         setTimeout(() => {
             toast.style.opacity = "0";
-            toast.style.transform = "translateY(-20px)";
+            toast.style.transform = "translate(-50%, -50%) scale(0.96)";
             setTimeout(() => {
                 if (toast.parentNode) {
                     toast.parentNode.removeChild(toast);

@@ -1,7 +1,7 @@
 {
     "name": "WebEdit",
     "description": "Edit web page elements freely",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "manifest_version": 3,
     "icons": {
         "16": "images/edit_off.png",
@@ -37,9 +37,7 @@
     ],
     "permissions": [
         "contextMenus",
-        "tabs",
-        "activeTab",
-        "scripting"
+        "activeTab"
     ],
     "host_permissions": [
         "http://*/*",
