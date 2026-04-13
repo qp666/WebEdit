@@ -1,11 +1,31 @@
 # WebEdit
 
-A Chrome extension that allows you to edit web page elements freely.
+在任意网页上开启**自由编辑模式**的 Chrome 扩展。
 
-## Features
+---
 
-1.  **Click Icon to Toggle**: Click the extension icon in the browser toolbar to enable or disable edit mode.
-    *   **Blue Icon**: Edit Mode Enabled.
-    *   **Gray Icon**: Edit Mode Disabled.
-2.  **Context Menu**: Right-click anywhere on the page and select "Toggle Edit Mode".
-3.  **Shortcut**: Use `Alt+Shift+D` to quickly toggle edit mode.
+## 📥 安装
+
+### 🛒 方式一：Chrome 应用商店（推荐）
+
+1. 打开 [Chrome 网上应用店](https://chromewebstore.google.com/)。
+2. 搜索 **WebEdit**，点击 **添加至 Chrome** 完成安装。
+
+### 📦 方式二：从 GitHub 离线加载
+
+1. 在 GitHub 项目页右侧 **Releases** 下载最新压缩包并解压。
+2. 在 Chrome 地址栏打开 `chrome://extensions/`，开启右上角 **开发者模式**。
+3. 点击 **加载已解压的扩展程序**，选择**含有 `manifest.json` 的目录**（一般为发布包内的 **`WebEdit`** 文件夹）。
+4. 安装后可将扩展 **固定到工具栏**，通过图标快速开关编辑模式。
+
+> **🔄 离线安装如何更新**：用新包覆盖解压目录（或重新选择解压路径），在 `chrome://extensions/` 中找到本扩展，点击 **重新加载**。
+
+---
+
+## ✨ 功能
+
+1. **🖱️ 工具栏图标** — 点击浏览器工具栏上的扩展图标，即可开启或关闭编辑模式。
+   - **🔵 蓝色图标**：编辑模式已开启。
+   - **灰色图标**：编辑模式已关闭。
+2. **📋 右键菜单** — 在网页任意位置右键，选择「开启/关闭 编辑模式」。
+3. **⌨️ 快捷键** — 使用 `Alt` + `Shift` + `D` 快速切换编辑模式。
